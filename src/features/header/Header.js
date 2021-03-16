@@ -46,7 +46,7 @@ function Header() {
       <Links>
         <StyledLogo />
         <StyledLink to="/employees">Database</StyledLink>
-        <StyledLink to="/employees">Time tranking</StyledLink>
+        <StyledLink to="/employees">Time tracking</StyledLink>
         <StyledLink to="/employees">Billing</StyledLink>
         <StyledLink to="/employees">Reports</StyledLink>
         <StyledLink to="/employees">About</StyledLink>

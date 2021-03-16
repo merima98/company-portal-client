@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Employees} />
-          <Route path="/editEmployee" component={EditEmployeeProfile} />
+          <Route path="/editEmployee/:id" component={EditEmployeeProfile} />
           <Route path="/employee/:id" component={Employee} />
         </Switch>
       </BrowserRouter>

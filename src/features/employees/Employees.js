@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import styled from "styled-components";
-import { useLocation, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import Header from "../header/Header";
 import queries from "../../api/queries";
@@ -79,8 +79,7 @@ function Employees() {
   const history = useHistory();
 
   function editProfile(id) {
-    console.log("Employee id is, ", id);
-    history.push("/editEmployee");
+    history.push(`/editEmployee/${id}`);
   }
 
   function viewProfile(id) {
