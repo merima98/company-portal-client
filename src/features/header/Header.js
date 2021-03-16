@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   left: 0;
   top: 0;
   right: 0;
+  margin-bottom: 2fr;
 `;
 
 const StyledLink = styled(NavLink)`
