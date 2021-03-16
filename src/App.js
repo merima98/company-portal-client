@@ -14,7 +14,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Employees} />
           <Route path="/editEmployee" component={EditEmployeeProfile} />
-          <Route path="/employee" component={Employee} />
+          <Route path="/employee/:id" component={Employee} />
         </Switch>
       </BrowserRouter>
     </QueryClientProvider>

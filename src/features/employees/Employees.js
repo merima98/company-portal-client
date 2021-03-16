@@ -84,8 +84,7 @@ function Employees() {
   }
 
   function viewProfile(id) {
-    console.log("Employee id is, ", id);
-    history.push("/employee");
+    history.push(`/employee/${id}`);
   }
   return (
     <div>
