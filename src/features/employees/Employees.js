@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import styled from "styled-components";
+import { useLocation, useHistory } from "react-router-dom";
 
 import Header from "../header/Header";
 import queries from "../../api/queries";
@@ -70,9 +71,22 @@ const TableContainerSmall = styled.div`
   }
 `;
 
+const Button = styled.button``;
+
 function Employees() {
   const { data } = useQuery("employees", () => queries.employees());
   const employees = data ? data.data : [];
+  const history = useHistory();
+
+  function editProfile(id) {
+    console.log("Employee id is, ", id);
+    history.push("/editEmployee");
+  }
+
+  function viewProfile(id) {
+    console.log("Employee id is, ", id);
+    history.push("/employee");
+  }
   return (
     <div>
       <Header />
@@ -94,7 +108,11 @@ function Employees() {
                 <StyledTableData>{employee.lastName}</StyledTableData>
                 <StyledTableData>{employee.email}</StyledTableData>
                 <StyledTableData>{employee.phone}</StyledTableData>
-                <StyledTableData>Edit | View</StyledTableData>
+                <StyledTableData>
+                  <Button onClick={() => editProfile(employee.id)}>Edit</Button>{" "}
+                  |{" "}
+                  <Button onClick={() => viewProfile(employee.id)}>View</Button>{" "}
+                </StyledTableData>
               </StyledTr>
             );
           })}
@@ -152,7 +170,16 @@ function Employees() {
               </StyledThead>
               <StyledTbodt>
                 <StyledTr>
-                  <StyledTableData>Edit | View</StyledTableData>
+                  <StyledTableData>
+                    {" "}
+                    <Button onClick={() => editProfile(employee.id)}>
+                      Edit
+                    </Button>{" "}
+                    |{" "}
+                    <Button onClick={() => viewProfile(employee.id)}>
+                      View
+                    </Button>{" "}
+                  </StyledTableData>
                 </StyledTr>
               </StyledTbodt>
             </MobileTable>
