@@ -16,9 +16,18 @@ const Table = styled.table`
     width: 80%;
     text-align: center;
     border-spacing: 0px;
+    margin-bottom: 1rem;
   }
 `;
 
+const Container = styled.div`
+  text-align: center;
+`;
+
+const AddButton = styled.button`
+  margin-bottom: 1rem;
+  cursor: pointer;
+`;
 const MobileTable = styled.table`
   margin: 0 auto;
   width: 80%;
@@ -69,6 +78,7 @@ const TableContainerSmall = styled.div`
   @media (min-width: ${BREAKPOINTS.SMALL_DEVICES}) {
     display: none;
   }
+  margin-bottom: 1rem;
 `;
 
 const Button = styled.button``;
@@ -86,7 +96,7 @@ function Employees() {
     history.push(`/employee/${id}`);
   }
   return (
-    <div>
+    <Container>
       <Header />
       <Table>
         <StyledThead>
@@ -184,7 +194,8 @@ function Employees() {
           );
         })}
       </TableContainerSmall>
-    </div>
+      <AddButton>Add new employee</AddButton>
+    </Container>
   );
 }
 
