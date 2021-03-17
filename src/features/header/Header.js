@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { Activity } from "react-feather";
 
 import { BREAKPOINTS } from "../../constants";
@@ -36,15 +36,20 @@ const Links = styled.div`
 const StyledLogo = styled(Activity)`
   padding: 10px;
   color: white;
+  cursor: pointer;
   @media (min-width: ${BREAKPOINTS.SMALL_DEVICES}) {
     padding: 14px;
   }
 `;
 function Header() {
+  const history = useHistory();
+  function gotToHome() {
+    history.push("/");
+  }
   return (
     <Wrapper>
       <Links>
-        <StyledLogo />
+        <StyledLogo onClick={() => gotToHome()} />
         <StyledLink to="/employees">Database</StyledLink>
         <StyledLink to="/employees">Time tracking</StyledLink>
         <StyledLink to="/employees">Billing</StyledLink>

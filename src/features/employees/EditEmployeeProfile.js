@@ -75,6 +75,7 @@ function EditEmployeeProfile() {
     },
     validationSchema,
     onSubmit: onSubmit,
+    enableReinitialize: true,
   });
   function onSubmit(values) {
     try {
