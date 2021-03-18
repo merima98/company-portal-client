@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink, useHistory } from "react-router-dom";
-import { Activity } from "react-feather";
+import { Home } from "react-feather";
 
 import { BREAKPOINTS } from "../../constants";
 
@@ -23,23 +23,29 @@ const StyledLink = styled(NavLink)`
 `;
 
 const Links = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
   margin: 0 auto;
+  align-items: center;
+
   @media (min-width: ${BREAKPOINTS.SMALL_DEVICES}) {
+    display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: 0fr;
     width: 80%;
   }
 `;
 
-const StyledLogo = styled(Activity)`
-  padding: 10px;
-  color: white;
+const StyledHome = styled(Home)`
+  /* padding: 10px; */
   cursor: pointer;
+  color: white;
+  /* padding: 10px;
   @media (min-width: ${BREAKPOINTS.SMALL_DEVICES}) {
     padding: 14px;
-  }
+  } */
 `;
 function Header() {
   const history = useHistory();
@@ -49,7 +55,7 @@ function Header() {
   return (
     <Wrapper>
       <Links>
-        <StyledLogo onClick={() => gotToHome()} />
+        <StyledHome onClick={() => gotToHome()} />
         <StyledLink to="/employees">Database</StyledLink>
         <StyledLink to="/employees">Time tracking</StyledLink>
         <StyledLink to="/employees">Billing</StyledLink>

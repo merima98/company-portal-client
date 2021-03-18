@@ -95,6 +95,9 @@ function Employees() {
   function viewProfile(id) {
     history.push(`/employee/${id}`);
   }
+  function addNewEmployee() {
+    history.push("/newEmployee");
+  }
   return (
     <Container>
       <Header />
@@ -194,7 +197,7 @@ function Employees() {
           );
         })}
       </TableContainerSmall>
-      <AddButton>Add new employee</AddButton>
+      <AddButton onClick={() => addNewEmployee()}>Add new employee</AddButton>
     </Container>
   );
 }
