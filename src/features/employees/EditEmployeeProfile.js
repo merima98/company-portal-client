@@ -68,6 +68,7 @@ function EditEmployeeProfile() {
 
   const formik = useFormik({
     initialValues: {
+      Id: employee.id,
       FirstName: employee.firstName,
       LastName: employee.lastName,
       Phone: employee.phone,

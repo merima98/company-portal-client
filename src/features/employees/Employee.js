@@ -35,6 +35,7 @@ function Employee() {
 
   const employeeQuery = useQuery("employee", () => queries.employeeById(id));
   const employee = employeeQuery.data?.data || {};
+
   return (
     <div>
       <Header />

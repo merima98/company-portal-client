@@ -24,11 +24,26 @@ const FormData = styled.form`
 `;
 const Label = styled.label`
   overflow-wrap: anywhere;
+  font-size: 14px;
 `;
 const Input = styled.input`
   overflow-wrap: anywhere;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #312f3a;
 `;
-const Button = styled.button``;
+const Button = styled.button`
+  cursor: pointer;
+  background-color: #312f3a;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid #312f3a;
+  margin-bottom: 1rem;
+`;
+const RadioLabel = styled.label`
+  overflow-wrap: anywhere;
+  font-size: 14px;
+`;
 
 function AddEmployee() {
   const history = useHistory();
@@ -117,7 +132,7 @@ function AddEmployee() {
           name="FullName"
         />
         <Label>Position</Label>
-        <label htmlFor="EmployeePositionId">
+        <RadioLabel htmlFor="EmployeePositionId">
           Software engineer
           <input
             type="radio"
@@ -125,9 +140,9 @@ function AddEmployee() {
             onChange={formik.handleChange}
             name="EmployeePositionId"
           />
-        </label>
+        </RadioLabel>
 
-        <label htmlFor="EmployeePositionId">
+        <RadioLabel htmlFor="EmployeePositionId">
           Data science developer
           <input
             type="radio"
@@ -135,11 +150,11 @@ function AddEmployee() {
             onChange={formik.handleChange}
             name="EmployeePositionId"
           />
-        </label>
+        </RadioLabel>
 
         <Label>Status</Label>
 
-        <label htmlFor="EmployeeStatusId">
+        <Label htmlFor="EmployeeStatusId">
           Remote
           <input
             type="radio"
@@ -147,9 +162,9 @@ function AddEmployee() {
             onChange={formik.handleChange}
             name="EmployeeStatusId"
           />
-        </label>
+        </Label>
 
-        <label htmlFor="EmployeeStatusId">
+        <Label htmlFor="EmployeeStatusId">
           From office
           <input
             type="radio"
@@ -157,7 +172,7 @@ function AddEmployee() {
             onChange={formik.handleChange}
             name="EmployeeStatusId"
           />
-        </label>
+        </Label>
         <Button type="submit">SAVE</Button>
       </FormData>
     </div>

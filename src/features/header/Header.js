@@ -39,13 +39,8 @@ const Links = styled.div`
 `;
 
 const StyledHome = styled(Home)`
-  /* padding: 10px; */
   cursor: pointer;
   color: white;
-  /* padding: 10px;
-  @media (min-width: ${BREAKPOINTS.SMALL_DEVICES}) {
-    padding: 14px;
-  } */
 `;
 function Header() {
   const history = useHistory();
