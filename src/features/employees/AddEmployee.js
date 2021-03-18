@@ -72,7 +72,6 @@ function AddEmployee() {
   return (
     <div>
       <Header />
-
       <FormData onSubmit={formik.handleSubmit}>
         <Label>First name</Label>
         <Input
@@ -119,7 +118,7 @@ function AddEmployee() {
         />
         <Label>Position</Label>
         <label htmlFor="EmployeePositionId">
-          Position 1
+          Software engineer
           <input
             type="radio"
             value={parseInt(1)}
@@ -129,7 +128,7 @@ function AddEmployee() {
         </label>
 
         <label htmlFor="EmployeePositionId">
-          Position 2
+          Data science developer
           <input
             type="radio"
             value={parseInt(2)}
@@ -141,7 +140,7 @@ function AddEmployee() {
         <Label>Status</Label>
 
         <label htmlFor="EmployeeStatusId">
-          Status 1
+          Remote
           <input
             type="radio"
             value={1}
@@ -151,7 +150,7 @@ function AddEmployee() {
         </label>
 
         <label htmlFor="EmployeeStatusId">
-          Status 2
+          From office
           <input
             type="radio"
             value={2}
@@ -161,15 +160,6 @@ function AddEmployee() {
         </label>
         <Button type="submit">SAVE</Button>
       </FormData>
-
-      {/* 
-
-        <CHContainer>
-          Two
-          <Inpp type="checkbox" />
-          <span class="checkmark"></span>
-        </CHContainer>
-    */}
     </div>
   );
 }
