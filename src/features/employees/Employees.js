@@ -25,8 +25,12 @@ const Container = styled.div`
 `;
 
 const AddButton = styled.button`
-  margin-bottom: 1rem;
   cursor: pointer;
+  background-color: #312f3a;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid #312f3a;
+  margin-bottom: 1rem;
 `;
 const MobileTable = styled.table`
   margin: 0 auto;
@@ -81,7 +85,13 @@ const TableContainerSmall = styled.div`
   margin-bottom: 1rem;
 `;
 
-const Button = styled.button``;
+const Button = styled.button`
+  cursor: pointer;
+  background-color: #312f3a;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid #312f3a;
+`;
 
 function Employees() {
   const { data } = useQuery("employees", () => queries.employees());

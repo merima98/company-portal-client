@@ -51,7 +51,7 @@ function Header() {
     <Wrapper>
       <Links>
         <StyledHome onClick={() => gotToHome()} />
-        <StyledLink to="/employees">Database</StyledLink>
+        <StyledLink to="/employees">Employees</StyledLink>
         <StyledLink to="/employees">Time tracking</StyledLink>
         <StyledLink to="/employees">Billing</StyledLink>
         <StyledLink to="/employees">Reports</StyledLink>
