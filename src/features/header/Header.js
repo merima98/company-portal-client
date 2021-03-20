@@ -51,11 +51,11 @@ function Header() {
     <Wrapper>
       <Links>
         <StyledHome onClick={() => gotToHome()} />
-        <StyledLink to="/employees">Employees</StyledLink>
+        <StyledLink to="/">Employees</StyledLink>
         <StyledLink to="/employees">Time tracking</StyledLink>
         <StyledLink to="/employees">Billing</StyledLink>
         <StyledLink to="/employees">Reports</StyledLink>
-        <StyledLink to="/employees">About</StyledLink>
+        <StyledLink to="/about">About</StyledLink>
         <StyledLink to="/employees">Services</StyledLink>
         <StyledLink to="/employees">Team</StyledLink>
         <StyledLink to="/employees">Contact</StyledLink>
